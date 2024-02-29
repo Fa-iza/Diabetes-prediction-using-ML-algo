@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span{
+                color: #03a9f4;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+{{pred_data}}
+{% if pred_data[0]==0%}
+<center> <h1> DIABETES <span> NOT DITECTED</h1>
+   <img src='static/normal.jpg'> </center>
+{% endif %}
+{% if pred_data[0]==1%}
+<center> <h1> DIABETIES <span> PREDICTED</h1>
+   <img src='static/diabetes.jpg'> </center>
+{% endif %}
+    
+    </body>
+</html>

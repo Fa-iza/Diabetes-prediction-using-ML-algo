@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family:  'Josefin Sans', sans-serif;
+          
+      }
+      body{
+          background-image: url("https://thumbs.dreamstime.com/b/world-diabetes-day-awareness-concept-stethoscope-blue-ribbon-measure-set-pastel-pink-background-november-198976346.jpg");
+          background-size:cover;
+          object-fit: cover;
+      }
+      
+      span{
+          color: #03a9f4;
+      }
+      
+      .main_div{
+          width: 100%;
+          height:  100vh;
+          position: relative;
+      }
+      
+      .box{
+          width: 500px;
+          position: absolute ;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 30px;
+          box-shadow:  20px 20px #03a9f4;
+      }
+      
+      .box h1{
+          margin-bottom: 30px;
+          color: #fff;
+          text-align: center;
+          text-transform: capitalize;
+      }
+      
+      .box .inputBox{
+          position: relative;
+      }
+      
+      .box .inputBox input{
+          width:  100%;
+          padding: 10px;
+          font-size: 16px;
+          color: #fff;
+          letter-spacing: 1px;
+          margin-bottom:  30px;
+          border: none;
+          border-bottom: 1px solid #fff;
+          background: transparent;
+          outline: none;
+      }
+      
+      .box .inputBox label{
+          position:absolute;
+          top:  0;
+          left: 0;
+          letter-spacing: 1px;
+          padding:  10px 0;
+          font-size: 16px;
+          color: #fff;
+          transition: 0.5s;
+      }
+      
+      .box .inputBox input:focus ~ label,
+      .box .inputBox input:valid ~ label{
+          top: -20px;
+          left: 0;
+          color: #03a9f4;
+          font-size: 12px;
+      }
+      
+      
+      .box input[type ="submit"]{
+          background: transparent;
+          border: none;
+          color: #fff;
+          background-color: #03a9f4;
+          padding: 8px 16px;
+          border-radius: 5px;
+          font-size: 16px;
+      }
+        ul.a {
+          position: relative;
+          left: 200px;
+
+        }
+        ul.b {
+          position: relative;
+          left: 350px; 
+        }
+
+      </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <div class="main_div">
+       <div class='box'>
+         <center> <h1>Diabetes <span>Predictor</span></h1> </center>
+          <form method="POST" action="{{url_for('predict')}}">
+            <div class="inputBox">
+              <input type='text' name='Pregnanciestxt'  autocomplete="off" required>
+              <label>Pregnancies</label>
+            </div>
+           <div class="inputBox">
+            <input type='text' name='Glucosetxt'  autocomplete="off" required>
+            <label>Glucose</label>
+           </div>
+            <div class="inputBox">
+               <input type='text' name='BloodPressuretxt'  autocomplete="off" required>
+               <label>BloodPressure</label>
+            </div>
+            <div class="inputBox">
+              <input type='text' name='SkinThicknesstxt'  autocomplete="off" required>
+              <label>SkinThickness</label>
+            </div>
+            <div class="inputBox">
+              <input type='text' name='Insulintxt'  autocomplete="off" required>
+              <label>Insulin</label>
+            </div>
+            <div class="inputBox">
+              <input type='text' name='BMItxt'  autocomplete="off" required>
+              <label>BMI</label>
+            </div>
+            <div class="inputBox">
+              <input type='text' name='DiabetesPedigreeFunctiontxt'  autocomplete="off" required>
+              <label>DiabetesPedigreeFunction</label>
+            </div>
+            <div class="inputBox">
+              <input type='text' name='Agetxt'  autocomplete="off" required>
+              <label>Age</label>
+            </div class="btn">
+            <input type="submit" name="" value="predict">
+          </form>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
